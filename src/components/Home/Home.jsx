@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Bounce, Fade, Zoom } from "react-reveal";
 import ProfileImage from "../../images/image.jpeg";
 import Slider from "../Slider/Slider";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Home = () => {
+  const [mobile, setMobile] = useState(false);
+
+  const smallScreen = useMediaQuery("(max-width:768px)");
+  const bigScreen = useMediaQuery("(max-width:2024px)");
+
+  useEffect(() => {
+    if (smallScreen) {
+      setMobile(true);
+    } else if (bigScreen) {
+      setMobile(false);
+    }
+  }, [smallScreen, bigScreen]);
+
   return (
     <>
       <hr id="home" style={{ opacity: 0 }} />
@@ -28,12 +42,12 @@ const Home = () => {
               </p>
               <div>
                 <form action="/footer">
-                  <button id="but1">
+                  <button id={mobile ? "right-btn1" : "but1"}>
                     <span>HIRE ME!</span>
                   </button>
                 </form>
                 <form action="/projects">
-                  <button id="but2">
+                  <button id={mobile ? "right-btn2" : "but2"}>
                     <span>MY PROJECTS</span>
                   </button>
                 </form>
@@ -52,7 +66,7 @@ const Home = () => {
           </h1>
         </div>
         <Zoom>
-          <Slider className="slider"/>
+          <Slider className="slider" />
         </Zoom>
       </section>
     </>

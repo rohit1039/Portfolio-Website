@@ -5,6 +5,7 @@ import certificate3 from "../../CERTIFICATES/Screenshot (293).png";
 import certificate4 from "../../CERTIFICATES/Screenshot (294).png";
 
 export default function Carousel() {
+
   useEffect(() => {
     initFlickity();
   }, []);
@@ -12,10 +13,11 @@ export default function Carousel() {
   const carousel = useRef(null);
 
   async function initFlickity() {
+
     if (typeof window !== "undefined" && carousel.current) {
       const Flickity = (await import("flickity")).default;
       new Flickity(carousel.current, {
-        lazyLoad: true,
+        lazyLoad: false,
         wrapAround: true,
         autoPlay: true,
       });
@@ -25,7 +27,7 @@ export default function Carousel() {
   return (
     <div
       ref={carousel}
-      className="w-full h-[600px] sm:w-[560px] sm:h-auto mx-auto relative carousel" data-aos="zoom-in"
+      className="w-full h-[600px] sm:w-[560px] sm:h-auto mx-auto relative carousel"
     >
       <div className="carousel-cell">
         <img src={certificate1} alt="" className="img-carousel" />

@@ -36,6 +36,20 @@ body {
   z-index: 10000;
 }
 
+.navbar-toggler {
+  display: none;
+  position: absolute;
+  border: none;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+}
+
 .leftNavContents {
   width: 28%;
 }
@@ -43,7 +57,7 @@ body {
 .leftNavContents h1 {
   font-size: 2rem;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 4%;
   color: #d0d0d0;
   font-family: var(--poppins);
   font-weight: 800;
@@ -943,40 +957,37 @@ hr {
 
   .navbar {
     height: 8vmax;
-    display: flex;
     position: sticky;
     background-color: var(--nero);
     top: 0;
     width: 100%;
+    margin-bottom: 15%;
     z-index: 10000;
   }
 
   .leftNavContents {
     width: 50%;
-    margin-left: -5%;
   }
 
-  .rightNavContents {
-    margin-top: 3%;
-    width: 50%;
-    display: none;
+  .navbar-toggler {
+    display: flex;
   }
 
   .rightNavContents > a {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    transition: all 0.5s ease-in-out;
-    text-transform: uppercase;
-    font-size: medium;
-    width: 50%;
-    height: 50%;
-    margin-top: 2%;
   }
-  .rightNavContents .active {
-    color: #ddd101;
+
+  .rightNavContents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--nero);
+    margin-top: 15.5%;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
   }
 
   .rightNavContents > a:hover {
@@ -988,16 +999,15 @@ hr {
     content: "";
     position: absolute;
     bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 5px;
+    left: 0%;
+    transform: translateX(0%);
+    border-radius: 0px;
     width: 0;
-    height: 2px;
-    background: var(--color);
-    transition: var(--transition);
+    height: 0px;
   }
-  .rightNavContents > a:hover::after {
-    width: 100px;
+
+  .rightNavContents .active {
+    color: #ddd101;
   }
 
   /** Home **/
@@ -1065,7 +1075,7 @@ hr {
     font-weight: 500;
   }
 
-  #but1 {
+  #right-btn1 {
     border-radius: 100px;
     background-color: var(--color);
     border: none;
@@ -1082,7 +1092,7 @@ hr {
     font-weight: 500;
   }
 
-  #but2 {
+  #right-btn2 {
     border-radius: 100px;
     background-color: #111;
     border: 1px white solid;
@@ -1092,7 +1102,6 @@ hr {
     letter-spacing: 2px;
     padding: 10px;
     width: 120px;
-    transition: all 0.5s;
     cursor: pointer;
     margin: 10px;
     margin-left: -5%;
@@ -1418,6 +1427,7 @@ hr {
   .rightAbout p {
     margin-top: 15%;
     line-height: 3.5vh;
+    font-family: var(--poppins);
     font-size: small;
     margin-left: 3%;
   }
@@ -1462,6 +1472,7 @@ hr {
     line-height: 5vh;
     flex-direction: column;
     font-size: small;
+    font-family: var(--poppins);
     margin-left: 3%;
   }
 
@@ -1478,11 +1489,13 @@ hr {
     color: #d0d0d0;
     margin-left: 10%;
     font-size: small;
+    font-family: var(--poppins);
   }
 
   .main {
     display: block;
     width: 80%;
+    font-family: var(--poppins);
   }
 
   .leftContact {
@@ -1607,6 +1620,7 @@ hr {
 
   form {
     display: inline-block;
+    font-family: var(--poppins);
   }
 
   .btn:hover span {

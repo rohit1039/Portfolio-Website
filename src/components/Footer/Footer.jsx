@@ -198,7 +198,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon"/>
             </span>
             &nbsp;
-            <span class="text"> Karanjia, District - Mayurbhanj, Odisha, India</span>
+            <span class="text"> Karanjia, District - Mayurbhanj </span>
           </div>
           <br />
           <div>
