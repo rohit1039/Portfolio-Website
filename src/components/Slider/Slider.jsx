@@ -3,6 +3,7 @@ import certificate1 from "../../CERTIFICATES/Big_Data.png";
 import certificate2 from "../../CERTIFICATES/Screenshot (292).png";
 import certificate3 from "../../CERTIFICATES/Screenshot (293).png";
 import certificate4 from "../../CERTIFICATES/Screenshot (294).png";
+import certificate5 from "../../CERTIFICATES/Screenshot (242).png";
 
 export default function Carousel() {
 
@@ -29,6 +30,9 @@ export default function Carousel() {
       ref={carousel}
       className="w-full h-[600px] sm:w-[560px] sm:h-auto mx-auto relative carousel"
     >
+      <div class="carousel-cell">
+        <img src={certificate5} alt="" className="img-carousel" />
+      </div>
       <div className="carousel-cell">
         <img src={certificate1} alt="" className="img-carousel" />
       </div>
