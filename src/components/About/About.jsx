@@ -13,14 +13,14 @@ import ProfileImage from "../../images/ROHIT.jpg";
 const About = () => {
   
   const usersDataInFileFormat = () => {
-    fetch("ROHIT's Resume.pdf").then((response) => {
+    fetch("Rohit's Resume.pdf").then((response) => {
       response.blob().then((blob) => {
         // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
         // Setting various property values
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "ROHIT's Resume.pdf";
+        alink.download = "Rohit's Resume.pdf";
         alink.click();
       });
     });
@@ -97,7 +97,7 @@ const About = () => {
                 />{" "}
                 &nbsp;Company: &nbsp;
               </span>
-              <span>Cognizant Technology Solutions</span>
+              <span>Wissen Technology</span>
             </div>
           </div>
           <div class="xyz">
